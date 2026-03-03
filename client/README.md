@@ -71,3 +71,52 @@ export default defineConfig([
   },
 ])
 ```
+
+---
+
+## Itinerary drag‑and‑drop helpers
+
+The new itinerary screen components live under `src/components/itinerary`.
+They rely on [@dnd-kit](https://github.com/clauderic/dnd-kit) for
+sortable/drag‑and‑drop functionality between day columns.
+
+Install the runtime dependencies before using them:
+
+```bash
+npm install @dnd-kit/core @dnd-kit/sortable @dnd-kit/utilities
+```
+
+Sample usage (e.g. in a page or story):
+
+```tsx
+import { DragDropBoard } from "./components/itinerary"
+
+const days: Day[] = [/* ... */]
+
+<DragDropBoard initialDays={days} />
+```
+
+### Comment panel components
+
+A lightweight threaded comment sidebar is also available under `src/components/comments`.
+
+```tsx
+import { CommentPanel, Comment } from "./components/comments"
+
+const comments: Comment[] = [/* fetched from backend */]
+
+<CommentPanel
+  isOpen={isCommentOpen}
+  onClose={() => setCommentOpen(false)}
+  activityTitle={currentActivity.title}
+  comments={comments}
+  onSend={(text, parentId) => {
+    // call your API then update local state
+  }}
+/>
+```
+
+The implementation is a lightweight wrapper over the kit that keeps drag
+logic isolated; it updates local React state and is ready for optimistic
+backend integration.
+
