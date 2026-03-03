@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/* ==== Light mode — token definitions ==== */
+@theme {
+  /* Background layers */
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F9FAFB;
+  --color-bg-tertiary: #F1F5F9;
+  --color-surface: #FFFFFF;
+  --color-border: #CBD5E1;
+
+  /* Text colors */
+  --color-text-primary: #0F1923;
+  --color-text-secondary: #334155;
+  --color-text-muted: #64748B;
+
+  /* Brand / semantic roles */
+  --color-primary: #0D5C8A;
+  --color-primary-hover: #0A4A70;
+  --color-accent: #E8542A;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-error: #DC2626;
+  --color-ai: #6B4EFF;
+
+  --color-transport: #3B82F6;
+  --color-hotel: #8B5CF6;
+  --color-food: #E8542A;
+  --color-sightseeing: #F59A23;
+  --color-adventure: #1B9963;
+  --color-shopping: #EC4899;
+  --color-other: #64748B;
+
+  --font-display: "Playfair Display", serif;
+  --font-heading: "DM Sans", sans-serif;
+  --font-body: "Source Serif 4", serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* ==== Dark mode overrides ==== */
+.dark {
+  @theme {
+    --color-bg-primary: #0F1923;
+    --color-bg-secondary: #1A2535;
+    --color-bg-tertiary: #243040;
+    --color-surface: #1F2D3D;
+    --color-border: #2E4057;
+
+    --color-text-primary: #F1F5F9;
+    --color-text-secondary: #94A3B8;
+    --color-text-muted: #64748B;
+
+    --color-primary: #1A8FD1;
+    --color-primary-hover: #2BA4E8;
+    --color-accent: #FF6B47;
+    --color-success: #22C55E;
+    --color-warning: #F59E0B;
+    --color-error: #EF4444;
+    --color-ai: #8B73FF;
+
+    --color-transport: #2563EB;
+    --color-hotel: #7C3AED;
+    --color-food: #D14324;
+    --color-sightseeing: #D97706;
+    --color-adventure: #128A52;
+    --color-shopping: #DB2777;
+    --color-other: #50607A;
+
+    --font-display: "Playfair Display", serif;
+    --font-heading: "DM Sans", sans-serif;
+    --font-body: "Source Serif 4", serif;
+    --font-mono: "JetBrains Mono", monospace;
+  }
+}
